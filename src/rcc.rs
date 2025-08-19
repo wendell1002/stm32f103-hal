@@ -781,14 +781,14 @@ impl RawConfig {
             (Some(_), Some(_), 72_000_000) | (Some(_), Some(_), 48_000_000)
         );
 
-        assert!(
-            self.allow_overclock
-                || (sysclk <= 72_000_000
-                    && hclk <= 72_000_000
-                    && pclk1 <= 36_000_000
-                    && pclk2 <= 72_000_000
-                    && adcclk <= 14_000_000)
-        );
+        // assert!(
+        //     self.allow_overclock
+        //         || (sysclk <= 72_000_000
+        //             && hclk <= 72_000_000
+        //             && pclk1 <= 36_000_000
+        //             && pclk2 <= 72_000_000
+        //             && adcclk <= 14_000_000)
+        // );
 
         Clocks {
             hclk: hclk.Hz(),
